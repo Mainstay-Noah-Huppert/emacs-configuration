@@ -10,10 +10,11 @@
 (defun vterm-minibuffer-base-dir-try-vc (buffer)
   "Attempts to return the version control project root directory, if this fails uses the directory associated with the open buffer, if this fails uses the home directory, if this fails uses `default-directory'."
   (interactive)
-  (or (vc-root-dir)
+  (with-current-buffer buffer
+    (or (vc-root-dir)
 	 (buffer-file-name)
 	 (expand-file-name "~/")
-	 (default-directory)))
+	 (default-directory))))
 
 (defcustom vterm-minibuffer-base-dir-function 'vterm-minibuffer-base-dir-try-vc
   "Function used to determine the base directory in which to open a VTerm.")
