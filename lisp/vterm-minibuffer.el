@@ -12,7 +12,7 @@
   (interactive)
   (with-current-buffer buffer
     (or (vc-root-dir)
-	 (buffer-file-name)
+	 (file-name-directory (buffer-file-name))
 	 (expand-file-name "~/")
 	 (default-directory))))
 
