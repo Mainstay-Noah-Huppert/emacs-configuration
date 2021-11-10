@@ -15,6 +15,9 @@ session.*
 # Buffer grouping in "projects" metadata file
 projectile-bookmarks.eld
 
+# Projectile
+projectile.cache
+
 # Buffer bookmarks
 bookmarks
 
@@ -34,3 +37,6 @@ thumbs/
 
 # Helm Google search
 /url/
+
+# Recentf files
+recentf
