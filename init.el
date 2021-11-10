@@ -169,6 +169,26 @@ current buffer."
 	  ("i" . "index")
 	  ("s" . "src")))
 
+(use-package ob-async
+  :ensure t
+  :init (setq org-ctrl-c-ctrl-c 'ob-async-org-babel-execute-src-block))
+(use-package ob-restclient
+  :ensure t
+  :config (org-babel-do-load-languages
+		 'org-babel-load-languages '((restclient . t))))
+(defun my-org-babel-confirm-evaluate (lang body)
+  "Checks to see if the babel code block contains the :secure argument in the header.
+If it does confirmation is not required to run the code block."
+  (let ((info (org-babel-get-src-block-info)))
+    (if info
+	   (if (assoc :secure (nth 2 info))
+		  nil
+		t)
+	 t)
+    )
+  )
+(setq org-confirm-babel-evaluate #'my-org-babel-confirm-evaluate)
+
 (use-package org-bullets
   :ensure t
   :custom
