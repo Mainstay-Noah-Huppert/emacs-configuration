@@ -160,7 +160,7 @@ current buffer."
 (if (boundp 'my-org-agenda-files)
     (setq org-agenda-files (mapcar 'expand-file-name my-org-agenda-files)))
 (setq org-todo-keywords
-	 '((sequence "TODO" "DOING" "PAUSED" "|" "DONE" "ABANDONED")))
+	 '((sequence "TODO" "DOING" "PAUSED" "BLOCKED" "|" "DONE" "ABANDONED")))
 
 (setq org-tempo-keywords-alist
 	 '(("L" . "latex")
