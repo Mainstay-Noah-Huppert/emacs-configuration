@@ -289,7 +289,11 @@ If it does confirmation is not required to run the code block."
 
 (use-package helm-swoop
   :ensure t)
-  ;; :bind ("C-s" . helm-swoop))
+;; :bind ("C-s" . helm-swoop))
+
+(use-package helm-ag
+  :ensure t
+  :custom (helm-follow-mode-persistent t))
 
 (use-package helm-lsp
   :ensure t
