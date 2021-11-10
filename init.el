@@ -448,12 +448,16 @@ If it does confirmation is not required to run the code block."
 (use-package gdscript-mode
   :ensure t)
 
+;; Rust
 (use-package rust-mode
   :ensure t)
 
+;; GraphQL
 (use-package graphql-mode
   :ensure t)
-(use-package request
+
+;; Package to make HTTP requests
+(use-package request 
   :ensure t)
 
 ;; JSON
