@@ -7,3 +7,5 @@
 (setq my-org-agenda-files
 	 (list
 	  "~/Documents/planner.org"))
+
+(setq my-font-size 200)
