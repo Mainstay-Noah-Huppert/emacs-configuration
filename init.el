@@ -341,14 +341,14 @@ If it does confirmation is not required to run the code block."
 ;; Web development
 (use-package typescript-mode
   :ensure t)
-(use-package tide
-  :ensure t)
+;; (use-package tide
+;;   :ensure t)
 
-(defun setup-tide-mode ()
-  (interactive)
-  (eldoc-mode +1)   ; Show function documentation on hover
-  (company-mode +1) ; Auto complete
-  (tide-setup))
+;; (defun setup-tide-mode ()
+;;   (interactive)
+;;   (eldoc-mode +1)   ; Show function documentation on hover
+;;   (company-mode +1) ; Auto complete
+;;   (tide-setup))
 
 (use-package web-mode
   :ensure t
