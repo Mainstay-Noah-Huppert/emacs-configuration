@@ -379,6 +379,15 @@ If it does confirmation is not required to run the code block."
 (use-package dockerfile-mode
   :ensure t)
 
+;; JSON
+(use-package json-mode
+  :ensure t)
+
+;; Haskell
+(use-package haskell-mode
+  :ensure t)
+
+
 								; Key Bindings
 
 ;; Make M-f to move to the beginning of the next word
