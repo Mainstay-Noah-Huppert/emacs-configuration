@@ -207,6 +207,10 @@ If it does confirmation is not required to run the code block."
   (ediff-window-setup-function 'ediff-setup-windows-plain) ; Make ediff navigation window not open in new window
   )
 
+;;; Open file on remote
+(use-package browse-at-remote
+  :ensure t)
+
 ;; Organize buffers by project
 (use-package projectile
   :ensure t
