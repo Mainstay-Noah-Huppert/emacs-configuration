@@ -66,7 +66,7 @@ Returns this window."
     (get-buffer-window))
 
 (defcustom vterm-minibuffer-split-function 'vterm-minibuffer-split-window-other
-  "The function `vterm-minibuffer-split-window' should use to select the window for the vterm buffer. This function should select and return the window.
+  "The function `vterm-minibuffer-split-window' should use to setup the window for the vterm buffer. This function should return the window.
 
 `vterm-minibuffer-split-window-next' is an alternative value.")
 (defun vterm-minibuffer-split-window ()
