@@ -184,11 +184,11 @@ current buffer."
 		   (dot . t)
 		   (sql . t))))
 (defun my-org-babel-confirm-evaluate (lang body)
-  "Checks to see if the babel code block contains the :secure argument in the header.
+  "Checks to see if the babel code block contains the :trust argument in the header.
 If it does confirmation is not required to run the code block."
   (let ((info (org-babel-get-src-block-info)))
     (if info
-	   (if (assoc :secure (nth 2 info))
+	   (if (assoc :trust (nth 2 info))
 		  nil
 		t)
 	 t)
