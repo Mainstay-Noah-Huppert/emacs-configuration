@@ -378,6 +378,10 @@ If it does confirmation is not required to run the code block."
   (web-mode-enable-auto-quoting nil) ; Disable auto-quoting
   )
 
+;; Graphviz dot mode
+(use-package graphviz-dot-mode
+  :ensure t)
+
 ;; Git config files
 (use-package gitattributes-mode
   :ensure t)
