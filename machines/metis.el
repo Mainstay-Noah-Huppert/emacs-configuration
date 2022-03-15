@@ -6,6 +6,7 @@
 ;; Location of Org mode agenda files on this machine
 (setq my-org-agenda-files
 	 (list
-	  "~/Documents/planner.org"))
+	  "~/Documents/planner.org"
+	  "~/Documents/planner.org_archive"))
 
 (setq my-font-size 200)

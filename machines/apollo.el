@@ -5,6 +5,7 @@
 (setq my-org-agenda-files
 	 (list
 	  "~/documents/planner.org"
+	  "~/documents/planner.org_archive"
 	  "~/documents/school/y5/afroam/afroam-133/planner.org"
 	  "~/documents/school/y5/afroam/afroam-133/lectures.org"
 	  "~/documents/school/y5/afroam/afroam-133/reading.org"
