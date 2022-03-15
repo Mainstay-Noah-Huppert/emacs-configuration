@@ -348,6 +348,10 @@ If it does confirmation is not required to run the code block."
 (use-package px
   :ensure t)
 
+;; Terraform
+(use-package terraform-mode
+  :ensure t)
+
 ;; Web development
 (use-package typescript-mode
   :ensure t)
