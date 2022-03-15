@@ -13,6 +13,10 @@
 (if (file-exists-p machine-specific-file) 
     (load machine-specific-file))
 
+;; Secret values
+(if (file-exists-p "~/.emacs.d/secret.el")
+    (load "~/.emacs.d/secret.el"))
+
 ;; Built in package manager
 (require 'package)
 
