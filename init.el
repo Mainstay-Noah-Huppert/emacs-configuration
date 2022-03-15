@@ -179,7 +179,10 @@ current buffer."
 (use-package ob-restclient
   :ensure t
   :config (org-babel-do-load-languages
-		 'org-babel-load-languages '((restclient . t))))
+		 'org-babel-load-languages
+		 '((restclient . t)
+		   (dot . t)
+		   (sql . t))))
 (defun my-org-babel-confirm-evaluate (lang body)
   "Checks to see if the babel code block contains the :secure argument in the header.
 If it does confirmation is not required to run the code block."
