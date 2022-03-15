@@ -40,3 +40,12 @@ thumbs/
 
 # Recentf files
 recentf
+
+# Secret file which will not be comitted
+secret.el
+
+# Emacs temp files
+\#*\#
+
+# TRAMP
+tramp

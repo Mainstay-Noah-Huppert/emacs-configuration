@@ -1,5 +1,5 @@
 								; Emacs Core
-;; Print debug information
+;; Pop up debug information on error
 ;; (setq debug-on-error t)
 
 (message "---------- NEW init.el LOAD ----------")
@@ -168,6 +168,7 @@ current buffer."
 	  ("A" . "ascii")
 	  ("i" . "index")
 	  ("s" . "src")))
+(setq org-startup-with-inline-images t) ; Make show inline images
 
 (use-package ob-async
   :ensure t
