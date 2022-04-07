@@ -11,3 +11,6 @@
 	  "~/Documents/planner.org_archive"))
 
 (setq my-font-size 200)
+
+;; Set Magit to use Homebrew version of Git
+(setq magit-git-executable "/usr/local/bin/git")
