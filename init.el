@@ -275,17 +275,19 @@ If it does confirmation is not required to run the code block."
 (use-package magit
   :ensure t)
 
-;; Diredq
+;; Dired
 (use-package dired-avfs
   :ensure t)
 (use-package dired-subtree
   :ensure t)
+(setq dired-listing-switches (concat dired-listing-switches "h"))
 
 ;; Language server protocol support
 (use-package lsp-mode
   :ensure t
   :init
   (setq lsp-keymap-prefix "C-c l")
+  :hook ((web-mode . lsp))
   :commands lsp)
 
 ;; Helm
@@ -312,6 +314,9 @@ If it does confirmation is not required to run the code block."
 (use-package helm-projectile
   :ensure t
   :config (helm-projectile-on))
+
+(use-package helm-tramp
+  :ensure t)
 
 ;; Writeable grep buffer
 (use-package wgrep
@@ -413,6 +418,17 @@ If it does confirmation is not required to run the code block."
 (use-package graphql-mode
   :ensure t)
 
+
+;; Terraform
+(use-package terraform-mode
+  :ensure t)
+
+;; Godot
+(use-package gdscript-mode
+  :ensure t)
+
+(use-package rust-mode
+  :ensure t)
 
 								; Key Bindings
 

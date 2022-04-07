@@ -1,5 +1,10 @@
+(defun determine-best-font-size () (if (> (display-pixel-width) 1280) 120 80))
+
 ;; Font size within Emacs
-(setq my-font-size 80)
+;;; 80  - for laptop screen
+;;; 120 - for 4k
+(setq my-font-size determine-best-font-size))
+(defun set-best-font-size () (interactive) (set-face-attribute 'default nil :height (determine-best-font-size)))
 
 ;; Location of Org mode agenda files on this machine
 (setq my-org-agenda-files
