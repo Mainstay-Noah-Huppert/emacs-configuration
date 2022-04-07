@@ -409,6 +409,10 @@ If it does confirmation is not required to run the code block."
 (use-package inf-mongo
   :ensure t)
 
+;; GraphQL
+(use-package graphql-mode
+  :ensure t)
+
 
 								; Key Bindings
 
