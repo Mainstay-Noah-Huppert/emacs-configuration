@@ -452,3 +452,16 @@ If it does confirmation is not required to run the code block."
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
     
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(rust-mode yaml-mode wgrep-helm web-mode vterm use-package typescript-mode transpose-frame terraform-mode shell-switcher rainbow-mode px org-bullets ob-restclient ob-async magit lsp-python-ms json-mode inf-mongo helm-tramp helm-swoop helm-projectile helm-lsp helm-ag haskell-mode graphviz-dot-mode graphql-mode go-mode gitignore-mode gitconfig-mode gitattributes-mode gdscript-mode flycheck editorconfig doom-themes dockerfile-mode dired-subtree dired-avfs dash-functional browse-at-remote)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
