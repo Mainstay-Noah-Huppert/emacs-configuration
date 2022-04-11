@@ -1,3 +1,10 @@
+;; Font size within Emacs
+;;; 80  - for laptop screen
+;;; 200 - for 4k
+(defun determine-best-font-size () (if (> (display-pixel-width) 1280) 200 80))
+(setq my-font-size (determine-best-font-size))
+(defun set-best-font-size () (interactive) (set-face-attribute 'default nil :height (determine-best-font-size)))
+
 ;; Set custom path locations
 (setenv "PATH" (concat (getenv "PATH") ":" "/usr/local/bin:/Library/TeX/texbin/"))
 (setq ispell-program-name "/usr/local/bin/ispell")
@@ -9,8 +16,6 @@
 	 (list
 	  "~/Documents/planner.org"
 	  "~/Documents/planner.org_archive"))
-
-(setq my-font-size 200)
 
 ;; Set Magit to use Homebrew version of Git
 (setq magit-git-executable "/usr/local/bin/git")
