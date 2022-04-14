@@ -1,7 +1,7 @@
 ;; Font size within Emacs
-;;; 80  - for laptop screen
+;;; 140  - for laptop screen
 ;;; 200 - for 4k
-(defun determine-best-font-size () (if (> (display-pixel-width) 1280) 200 80))
+(defun determine-best-font-size () (if (> (display-pixel-width) 1800) 200 140))
 (setq my-font-size (determine-best-font-size))
 (defun set-best-font-size () (interactive) (set-face-attribute 'default nil :height (determine-best-font-size)))
 
