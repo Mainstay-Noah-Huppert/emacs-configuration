@@ -376,10 +376,11 @@ If it does confirmation is not required to run the code block."
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-    ;; :hook (web-mode .
-  ;; 			   (lambda ()
-  ;; 				(when (string-equal "tsx" (file-name-extension buffer-file-name))
-  ;; 				  (setup-tide-mode))))
+  (add-to-list 'auto-mode-alist '("\\.mjs\\'" . web-mode))
+  :hook (web-mode .
+			   (lambda ()
+				(when (string-equal "tsx" (file-name-extension buffer-file-name))
+				  (setup-tide-mode))))
   :custom
   (web-mode-enable-auto-quoting nil) ; Disable auto-quoting
   )
@@ -429,6 +430,11 @@ If it does confirmation is not required to run the code block."
   :ensure t)
 
 (use-package rust-mode
+  :ensure t)
+
+(use-package graphql-mode
+  :ensure t)
+(use-package request
   :ensure t)
 
 								; Key Bindings
