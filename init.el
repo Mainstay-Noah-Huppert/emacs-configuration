@@ -452,6 +452,7 @@ If it does confirmation is not required to run the code block."
   :ensure t)
 (use-package request
   :ensure t)
+
 ;; JSON
 (use-package json-mode
   :ensure t)
