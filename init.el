@@ -468,6 +468,13 @@ If it does confirmation is not required to run the code block."
 (use-package haskell-mode
   :ensure t)
 
+;; MongoDB shell
+(use-package inf-mongo
+  :ensure t)
+
+;; GraphQL
+(use-package graphql-mode
+  :ensure t)
 
 								; Key Bindings
 
