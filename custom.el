@@ -8,8 +8,6 @@
  '(helm-mode t)
  '(image-dired-append-when-browsing t)
  '(image-dired-thumb-size 100)
- '(package-selected-packages
-   '(rust-mode yaml-mode wgrep-helm web-mode vterm use-package typescript-mode transpose-frame terraform-mode shell-switcher rainbow-mode px org-bullets ob-restclient ob-async magit lsp-python-ms json-mode inf-mongo helm-tramp helm-swoop helm-projectile helm-lsp helm-ag haskell-mode graphviz-dot-mode graphql-mode go-mode gitignore-mode gitconfig-mode gitattributes-mode gdscript-mode flycheck editorconfig doom-themes dockerfile-mode dired-subtree dired-avfs dash-functional browse-at-remote))
  '(projectile-mode t nil (projectile))
  '(size-indication-mode t)
  '(typescript-indent-switch-clauses t))
