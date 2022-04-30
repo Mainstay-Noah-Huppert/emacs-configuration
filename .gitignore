@@ -49,3 +49,6 @@ secret.el
 
 # TRAMP
 tramp
+
+# Requests
+request
