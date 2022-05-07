@@ -41,10 +41,11 @@
 								; Colors
 ;;;(load-theme 'zenburn t)
 ;;;(load-theme 'tangotango t)
+(setq my-theme (if (and (boundp 'my-dark-or-light) (eq my-dark-or-light 'light)) 'doom-one-light 'doom-one))
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-one t))
+  (load-theme my-theme t))
 ;(set-face-foreground 'font-lock-comment-face "green")
 
 								; Behavior
