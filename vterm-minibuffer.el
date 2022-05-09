@@ -11,10 +11,10 @@
   "Attempts to return the version control project root directory, if this fails uses the directory associated with the open buffer, if this fails uses the home directory, if this fails uses `default-directory'."
   (interactive)
   (with-current-buffer buffer
-    (or (vc-root-dir)
-	 (file-name-directory (buffer-file-name))
-	 (expand-file-name "~/")
-	 (default-directory))))
+    (or (vc-root-dir) ; Try the version control project root
+	 (if (buffer-file-name) (file-name-directory (buffer-file-name))) ; If viewing a file use that file's directory
+	 (expand-file-name "~/") ; Try user's home directory
+	 (default-directory)))) ; Fallback to whatever default-directory is
 
 (defcustom vterm-minibuffer-base-dir-function 'vterm-minibuffer-base-dir-try-vc
   "Function used to determine the base directory in which to open a VTerm.")
