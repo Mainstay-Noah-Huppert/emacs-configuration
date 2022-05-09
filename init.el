@@ -287,6 +287,7 @@ If it does confirmation is not required to run the code block."
   :ensure t
   :init
   (setq lsp-keymap-prefix "C-c l")
+  (setq web-mode-enable-auto-indentation nil)
   :hook ((web-mode . lsp))
   :commands lsp)
 
