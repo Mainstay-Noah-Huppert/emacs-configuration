@@ -1,9 +1,13 @@
 ;; Font size within Emacs
 ;;; 140  - for laptop screen
 ;;; 200 - for 4k
-(defun determine-best-font-size () (if (> (display-pixel-width) 1800) 200 140))
+(setq my-font-size-laptop 140)
+(setq my-font-size-4k 200)
+(defun determine-best-font-size () (if (> (display-pixel-width) 1800) my-font-size-4k my-font-size-laptop))
 (setq my-font-size (determine-best-font-size))
 (defun set-best-font-size () (interactive) (set-face-attribute 'default nil :height (determine-best-font-size)))
+
+(defun set-font-size (size) (interactive) (set-face-attribute 'default nil :height size))
 
 ;; Set custom path locations
 (setenv "PATH" (concat (getenv "PATH") ":" "/usr/local/bin:/Library/TeX/texbin/"))
