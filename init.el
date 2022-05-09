@@ -1,6 +1,6 @@
 								; Emacs Core
 ;; Pop up debug information on error
-(setq debug-on-error t)
+;; (setq debug-on-error t)
 
 (message "---------- NEW init.el LOAD ----------")
 
