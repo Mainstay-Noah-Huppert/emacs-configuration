@@ -38,6 +38,7 @@ Returns the new or existing VTerm buffer."
   (interactive)
   (let ((current-prefix-arg id)
 	   (vterm-buffer-name (vterm-minibuffer-vterm-buffer-name base-dir))) ; Tell vterm fn the name of the new vterm buffer we want
+    (cd base-dir)
     (call-interactively 'vterm)))
 
 (defcustom vterm-minibuffer-split-window-next-split-function 'split-window-below

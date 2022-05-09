@@ -1,11 +1,11 @@
 								; Emacs Core
 ;; Pop up debug information on error
-;; (setq debug-on-error t)
+(setq debug-on-error t)
 
 (message "---------- NEW init.el LOAD ----------")
 
 ;; Local plugins
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (setq machine-specific-file
 	 (concat
 	  (expand-file-name "~/.emacs.d/machines/")
@@ -265,11 +265,7 @@ If it does confirmation is not required to run the code block."
 		(lambda () (linum-mode 0)))
 (setq term-suppress-hard-newline t)
 
-;; VTerm
-;;; Trying out to see how it is
-(use-package vterm
-  :ensure t)
-
+(load (expand-file-name "./vterm-minibuffer.el"))
 (define-key global-map (kbd "M-!") 'vterm-minibuffer)
   
 ;; Git integration
