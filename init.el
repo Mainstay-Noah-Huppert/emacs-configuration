@@ -41,6 +41,11 @@
 								; Colors
 ;;;(load-theme 'zenburn t)
 ;;;(load-theme 'tangotango t)
+(defcustom my-dark-or-light 'dark
+  "Indicates whether the dark or light theme should be used. Valid values
+
+  `light'
+  `dark'")
 (setq my-theme (if (and (boundp 'my-dark-or-light) (eq my-dark-or-light 'light)) 'doom-one-light 'doom-one))
 (use-package doom-themes
   :ensure t
