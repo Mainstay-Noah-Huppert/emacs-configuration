@@ -6,6 +6,8 @@
 
 ;; Local plugins
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;;; Machine specific files - before
 (setq machine-specific-file
 	 (concat
 	  (expand-file-name "~/.emacs.d/machines/")
@@ -481,3 +483,11 @@ If it does confirmation is not required to run the code block."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Machine specific files - after
+(setq machine-specific-file
+	 (concat
+	  (expand-file-name "~/.emacs.d/machines/")
+	  (concat (system-name) "-post.el")))
+(if (file-exists-p machine-specific-file) 
+    (load machine-specific-file))

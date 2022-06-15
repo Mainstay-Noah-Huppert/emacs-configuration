@@ -22,7 +22,7 @@ Emacs configuration directory (`~/.emacs.d`).
 The `init.el` file and associated lisp provides some custom features on top of Emacs:
 
 ## Machine Specific Configuration
-The `machines/` directory contains Lisp files which are only included on machines with matching names (determined using the `system-name` variable).
+The `machines/` directory contains Lisp files which are only included on machines with matching names (determined using the `system-name` variable). Files named `<system-name>.el` are loaded before most expressions in `init.el`. Files named `<system-name>-post.el` are loaded after most expressions in `init.el`.
 
 For example if a machine was named `foo-bar` then the `machines/foo-bar.el` file would be included if it exists.
 
