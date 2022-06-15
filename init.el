@@ -380,6 +380,7 @@ If it does confirmation is not required to run the code block."
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
     ;; :hook (web-mode .
   ;; 			   (lambda ()
   ;; 				(when (string-equal "tsx" (file-name-extension buffer-file-name))
