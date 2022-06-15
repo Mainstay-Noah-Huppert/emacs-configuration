@@ -272,7 +272,7 @@ If it does confirmation is not required to run the code block."
 		(lambda () (linum-mode 0)))
 (setq term-suppress-hard-newline t)
 
-(load (expand-file-name "./vterm-minibuffer.el"))
+(load (expand-file-name "~/.emacs.d/vterm-minibuffer.el"))
 (define-key global-map (kbd "M-!") 'vterm-minibuffer)
   
 ;; Git integration
