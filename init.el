@@ -94,9 +94,6 @@
 ;;; (add-hook 'text-mode-hook (lambda () (interactive) (column-marker-3 80)))
 ;;; (add-hook 'go-mode-hook (lambda () (interactive) (column-marker-3 80)))
 
-;; Spell check
-(add-hook 'text-mode-hook 'flyspell-mode)
-
 ;; Highlight hex colors
 (use-package rainbow-mode
   :ensure t)
