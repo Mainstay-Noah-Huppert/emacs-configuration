@@ -23,3 +23,14 @@
 
 ;; Set Magit to use Homebrew version of Git
 (setq magit-git-executable "/usr/local/bin/git")
+
+;; Org mode LaTeX exports
+(setq org-latex-listings 'minted
+	 org-latex-packages-alist '(("" "listingsutf8")
+						   ("" "minted")
+						   ("margin=0.5in" "geometry" nil))
+	 org-latex-pdf-process
+	 '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")
+	 org-src-fontify-natively t)
