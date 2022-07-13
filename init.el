@@ -226,9 +226,10 @@ If it does confirmation is not required to run the code block."
 ;; Organize buffers by project
 (use-package projectile
   :ensure t
-  :config (projectile-mode +1))
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  :config (projectile-mode +1)
+  :bind (:map projectile-mode-map
+		    ("s-p" . 'projectile-command-map)
+		    ("C-c p" . 'projectile-command-map)))
 
 ;; Make Dired show human units
 (setq dired-listing-switches "-alh")
