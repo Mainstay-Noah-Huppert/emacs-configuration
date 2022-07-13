@@ -276,6 +276,9 @@ If it does confirmation is not required to run the code block."
 (use-package magit
   :ensure t)
 
+(use-package git-link
+  :ensure t)
+
 ;; Dired
 (use-package dired-avfs
   :ensure t)
