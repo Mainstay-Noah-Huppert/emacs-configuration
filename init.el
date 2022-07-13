@@ -395,11 +395,7 @@ If it does confirmation is not required to run the code block."
   :ensure t)
 
 ;; Git config files
-(use-package gitattributes-mode
-  :ensure t)
-(use-package gitconfig-mode
-  :ensure t)
-(use-package gitignore-mode
+(use-package git-modes
   :ensure t)
 
 ;; Foreman Procfile
