@@ -12,6 +12,10 @@
       (format "%s\\|%s"
                     vc-ignore-dir-regexp
                     tramp-file-name-regexp))
-(setq tramp-verbose 10)
 
+(setq tramp-default-method "ssh")
 
+;; Need to set these variables or else ansi-term freaks out when trying to parse escape code information
+(setq ange-ftp-default-user nil)
+(setq ange-ftp-default-password nil)
+(setq ange-ftp-generate-anonymous-password nil)
