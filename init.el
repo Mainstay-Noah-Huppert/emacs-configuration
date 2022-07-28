@@ -1,7 +1,7 @@
 								; Emacs Core
 ;; Pop up debug information on error
 ;; (setq debug-on-error t)
-
+;; (toggle-debug-on-quit 1)
 (message "---------- NEW init.el LOAD ----------")
 
 ;; Local plugins
@@ -293,6 +293,11 @@ If it does confirmation is not required to run the code block."
   :init
   (setq lsp-keymap-prefix "C-c l")
   (setq web-mode-enable-auto-indentation nil)
+  :config
+  (lsp-register-client (make-lsp-client :new-connection (lsp-tramp-connection "deno")
+								:major-modes '(web-mode)
+								:remote? t
+								:server-id 'coder.noah))
   :hook ((web-mode . lsp))
   :commands lsp)
 
