@@ -8,9 +8,6 @@
  '(helm-mode t)
  '(image-dired-append-when-browsing t)
  '(image-dired-thumb-size 100)
- '(my-dark-or-light 'dark)
- '(typescript-indent-switch-clauses t)
- '(vterm-minibuffer-split-function 'vterm-minibuffer-split-window-next)
  '(projectile-mode t nil (projectile))
  '(size-indication-mode t))
 (custom-set-faces
