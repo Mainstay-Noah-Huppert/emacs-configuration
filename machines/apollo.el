@@ -1,4 +1,5 @@
 (defun determine-best-font-size () (if (> (display-pixel-width) 1280) 120 78))
+(setq my-dark-or-light 'dark)
 
 ;; Font size within Emacs
 ;;; 80  - for laptop screen
