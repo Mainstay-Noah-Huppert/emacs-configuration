@@ -10,7 +10,7 @@
  '(image-dired-thumb-size 100)
  '(my-dark-or-light 'dark)
  '(package-selected-packages
-   '(git-link yaml-mode wgrep-helm web-mode vterm use-package typescript-mode transpose-frame terraform-mode shell-switcher rust-mode request rainbow-mode px org-bullets ob-restclient ob-async magit json-mode inf-mongo helm-tramp helm-swoop helm-projectile helm-lsp helm-ag haskell-mode graphviz-dot-mode graphql-mode go-mode git-modes gdscript-mode editorconfig doom-themes dockerfile-mode dired-subtree dired-avfs browse-at-remote))
+   '(yasnippet git-link yaml-mode wgrep-helm web-mode vterm use-package typescript-mode transpose-frame terraform-mode shell-switcher rust-mode request rainbow-mode px org-bullets ob-restclient ob-async magit json-mode inf-mongo helm-tramp helm-swoop helm-projectile helm-lsp helm-ag haskell-mode graphviz-dot-mode graphql-mode go-mode git-modes gdscript-mode editorconfig doom-themes dockerfile-mode dired-subtree dired-avfs browse-at-remote))
  '(typescript-indent-switch-clauses t)
  '(vterm-minibuffer-split-function 'vterm-minibuffer-split-window-next))
 (custom-set-faces
