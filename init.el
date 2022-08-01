@@ -293,13 +293,23 @@ If it does confirmation is not required to run the code block."
   :init
   (setq lsp-keymap-prefix "C-c l")
   (setq web-mode-enable-auto-indentation nil)
+  (setq lsp-log-io t)
   :config
-  (lsp-register-client (make-lsp-client :new-connection (lsp-tramp-connection "deno")
+  (lsp-register-client (make-lsp-client :new-connection (lsp-tramp-connection (list "typescript-language-server" "--stdio"))
 								:major-modes '(web-mode)
 								:remote? t
-								:server-id 'coder.noah))
+								:priority 1
+								:server-id 'typescript))
+    ;; (lsp-register-client (make-lsp-client :new-connection (lsp-tramp-connection "deno")
+    ;; 								:major-modes '(web-mode)
+    ;; 								:remote? t
+    ;; 								:priority 1
+    ;; 								:initialization-options '(:enable t)
+    ;; 								:server-id 'deno-ls))
   :hook ((web-mode . lsp))
   :commands lsp)
+(use-package yasnippet
+  :ensure t)
 
 ;; Helm
 (use-package helm
