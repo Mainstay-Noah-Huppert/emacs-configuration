@@ -22,5 +22,5 @@
 (setq ange-ftp-generate-anonymous-password nil)
 
 (connection-local-set-profile-variables 'remote-deno-path
-								 '((tramp-remote-path . ("~/.deno/bin/" tramp-default-remote-path))))
+								 '((tramp-remote-path . ("~/.deno/bin/" "~/.nvm/versions/node/v18.7.0/bin" tramp-default-remote-path))))
 (connection-local-set-profiles '(:machine "coder.noah") 'remote-deno-path)
